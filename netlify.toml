@@ -1,0 +1,13 @@
+# Netlify deploy configuration.
+# Netlify reads this file automatically, so the build settings below are
+# applied without needing to set anything by hand in the Netlify UI.
+
+[build]
+  # developerFolio is a Create React App project.
+  command = "npm run build"
+  # CRA outputs the finished site into the "build" folder (Vite used "dist").
+  publish = "build"
+
+[build.environment]
+  # Pin Node to a version that works with react-scripts 5.
+  NODE_VERSION = "20"
